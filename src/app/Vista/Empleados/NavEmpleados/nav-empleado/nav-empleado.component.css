@@ -1,0 +1,27 @@
+.Orelega
+{
+    font-family: 'Orelega One', cursive;
+}
+.activeRouter
+{
+    background-color: rgb( 83, 141, 168 ) !important;
+    color:black;
+    
+}
+.colorNavegacion
+{
+    background-color: rgb( 195, 204, 208 ) !important;
+    color: black i !important;
+}
+.colorLetra
+{
+    color: rgb(0, 0, 0) !important;
+}
+.fontFamily-Aton
+{
+    font-family: 'Anton', sans-serif;   
+}
+.font-Family-Fjalla
+{
+    font-family: 'Fjalla One', sans-serif;
+}

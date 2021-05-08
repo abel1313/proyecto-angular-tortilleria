@@ -1,0 +1,84 @@
+<section [formGroup]="datosForm">
+
+  <div class="row">
+    <div class="col-12">
+      
+        <mat-form-field class="example-full-width col-12">
+          <mat-label>
+            <p class='colorLetra text-center'>Nombre</p>
+          </mat-label>
+          <input matInput class='col-12' formControlName="nombrePersona" required minlength="2">
+        </mat-form-field>
+    
+        <div class="alert alert-info" *ngIf="datosForm.get('nombrePersona').invalid &&
+           (datosForm.get('nombrePersona').dirty || 
+           datosForm.get('nombrePersona').touched)">
+          Ingrese solo letras, minimo 2 caracteres y es requerido
+        </div>
+      </div>
+
+  </div>
+
+  <div class="row" >
+
+      <div class="col-6">
+        <mat-form-field class="example-full-width col-12">
+          <mat-label>
+            <p class='colorLetra'>Apellido paterno</p>
+          </mat-label>
+          <input matInput class='col-12' formControlName="paterno" required minlength="2">
+        </mat-form-field>    
+        <div class="alert alert-info" *ngIf="datosForm.get('paterno').invalid &&
+           (datosForm.get('paterno').dirty || 
+           datosForm.get('paterno').touched)">
+          Ingrese solo letras, minimo 2 caracteres y es requerido
+        </div> 
+      </div>
+      <div class="col-6">
+        <mat-form-field class="example-full-width col-12" >
+          <mat-label>
+            <p class='colorLetra'>Apellido materno</p>
+          </mat-label>
+          <input matInput class='col-12' formControlName="materno" required minlength="2">
+        </mat-form-field>
+        <div class="alert alert-info" *ngIf="datosForm.get('materno').invalid &&
+           (datosForm.get('materno').dirty || 
+           datosForm.get('materno').touched)">
+          Ingrese solo letras, minimo 2 caracteres y es requerido
+        </div>
+      </div>
+
+  </div>
+<!-- ----------------------- Cambiando todo ------------------------------------------------------------- -->
+
+<div class="row" >
+  <div class="col-6">
+    <mat-form-field class="example-full-width col-12">
+      <mat-label>
+        <p class='colorLetra'>Correo electrónico</p>
+      </mat-label>
+      <input matInput class='col-12' formControlName="correo" required >
+    </mat-form-field>
+    <div class="alert alert-info" *ngIf="datosForm.get('correo').invalid &&
+       (datosForm.get('correo').dirty || 
+       datosForm.get('correo').touched)">
+      correo no valido
+    </div>
+  </div>
+    <div class="col-6">
+     <mat-form-field class="example-full-width col-12">
+        <mat-label>
+          <p class='colorLetra'>Teléfono</p>
+        </mat-label>
+        <input matInput class='col-12' formControlName="telefono" required minlength="10" maxlength='10'>
+      </mat-form-field>
+      <div class="alert alert-info" *ngIf="datosForm.get('telefono').invalid &&
+         (datosForm.get('telefono').dirty || 
+         datosForm.get('telefono').touched)">
+        Ingrese solo números , mínimo 10 caracteres y es requerido
+      </div>
+    </div>
+</div>
+
+
+</section>

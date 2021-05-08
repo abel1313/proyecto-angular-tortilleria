@@ -1,0 +1,85 @@
+<form [formGroup]="datosDireccion">
+
+    <div class="row">
+      <div class="col-12">
+        
+          <mat-form-field class="example-full-width col-12">
+            <mat-label>
+              <p class='colorLetra text-center'>Calle</p>
+            </mat-label>
+            <input matInput class='col-12' formControlName="calleDireccion" required minlength="2">
+          </mat-form-field>
+      
+          <div class="alert alert-info" *ngIf="datosDireccion.get('calleDireccion').invalid &&
+             (datosDireccion.get('calleDireccion').dirty || 
+             datosDireccion.get('calleDireccion').touched)">
+            Ingrese solo letras, minimo 2 caracteres y es requerido
+          </div>
+        </div>
+  
+    </div>
+  
+    <div class="row" >
+  
+        <div class="col-6">
+          <mat-form-field class="example-full-width col-12">
+            <mat-label>
+              <p class='colorLetra'>Colonia</p>
+            </mat-label>
+            <input matInput class='col-12' formControlName="coloniaDireccion" required minlength="2">
+          </mat-form-field>    
+          <div class="alert alert-info" *ngIf="datosDireccion.get('coloniaDireccion').invalid &&
+             (datosDireccion.get('coloniaDireccion').dirty || 
+             datosDireccion.get('coloniaDireccion').touched)">
+            Ingrese solo letras, minimo 2 caracteres y es requerido
+          </div> 
+        </div>
+        <div class="col-6">
+          <mat-form-field class="example-full-width col-12" >
+            <mat-label>
+              <p class='colorLetra'>Código postal</p>
+            </mat-label>
+            <input matInput class='col-12' formControlName="postalDireccion" required minlength="2">
+          </mat-form-field>
+          <div class="alert alert-info" *ngIf="datosDireccion.get('postalDireccion').invalid &&
+             (datosDireccion.get('postalDireccion').dirty || 
+             datosDireccion.get('postalDireccion').touched)">
+            Ingrese solo letras, minimo 2 caracteres y es requerido
+          </div>
+        </div>
+  
+    </div>
+  <!-- ----------------------- Cambiando todo ------------------------------------------------------------- -->
+  
+  <div class="row" >
+    <div class="col-6">
+      <mat-form-field class="example-full-width col-12">
+        <mat-label>
+          <p class='colorLetra'>Número Interior</p>
+        </mat-label>
+        <input matInput class='col-12' formControlName="interiorDireccion" required >
+      </mat-form-field>
+      <div class="alert alert-info" *ngIf="datosDireccion.get('interiorDireccion').invalid &&
+         (datosDireccion.get('interiorDireccion').dirty || 
+         datosDireccion.get('interiorDireccion').touched)">
+        Ingrese datos correctos
+      </div>
+    </div>
+      <div class="col-6">
+       <mat-form-field class="example-full-width col-12">
+          <mat-label>
+            <p class='colorLetra'>Número exterior</p>
+          </mat-label>
+          <input matInput class='col-12' formControlName="numeroExterior" required minlength="2" maxlength='10'>
+        </mat-form-field>
+        <div class="alert alert-info" *ngIf="datosDireccion.get('numeroExterior').invalid &&
+           (datosDireccion.get('numeroExterior').dirty || 
+           datosDireccion.get('numeroExterior').touched)">
+          Ingrese los datos correctos
+        </div>
+      </div>
+  </div>
+  
+  
+  </form>
+  
