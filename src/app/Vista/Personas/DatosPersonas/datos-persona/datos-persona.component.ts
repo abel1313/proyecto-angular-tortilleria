@@ -10,7 +10,7 @@ export class DatosPersonaComponent implements OnInit {
 
   constructor( private fb:FormBuilder ) { }
 
-  @Input() datosForm: FormGroup;
+  @Input() datosPersona: FormGroup;
 
   soloNumerosDecimales: string = '^[0-9]+([.][0-9]{1,2})?$';
   soloNumeros: string = "^[0-9]+";
@@ -25,12 +25,12 @@ export class DatosPersonaComponent implements OnInit {
 
   datosPersonaInit(): void
   {
-    this.datosForm.addControl('nombrePersona', new FormControl('', [Validators.required, Validators.pattern("[a-zA-Z ]{2,254}")]));
-    this.datosForm.addControl('paterno', new FormControl('', [Validators.required, Validators.pattern("[a-zA-Z ]{2,254}")]));
-    this.datosForm.addControl('materno', new FormControl('', [Validators.required, Validators.pattern("[a-zA-Z ]{2,254}")]));
-    this.datosForm.addControl('correo', new FormControl('', [Validators.required, Validators.pattern( this.correo )]));
+    this.datosPersona.addControl('nombrePersona', new FormControl('', [Validators.required, Validators.pattern("[a-zA-Z ]{2,254}")]));
+    this.datosPersona.addControl('paterno', new FormControl('', [Validators.required, Validators.pattern("[a-zA-Z ]{2,254}")]));
+    this.datosPersona.addControl('materno', new FormControl('', [Validators.required, Validators.pattern("[a-zA-Z ]{2,254}")]));
+    this.datosPersona.addControl('correo', new FormControl('', [Validators.required, Validators.pattern( this.correo )]));
 
-    this.datosForm.addControl
+    this.datosPersona.addControl
     (
       'telefono', new FormControl
       ('', 

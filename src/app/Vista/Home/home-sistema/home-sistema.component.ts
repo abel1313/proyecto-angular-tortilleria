@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from '@techiediaries/ngx-qrcode';
+
 
 @Component({
   selector: 'app-home-sistema',
@@ -9,7 +11,16 @@ export class HomeSistemaComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  url: string = 'https://proyecto-abel-e1fu6mli5-abel1313.vercel.app/venta/nueva';
+  profile = 'app-nueva'
+  title = 'codigo-qr';
+  elementType = NgxQrcodeElementTypes.URL;
+  errorCorrectionLevel =  NgxQrcodeErrorCorrectionLevels;
+  value = this.url+this.profile;
+  
+  ngOnInit(): void 
+  {
+
   }
 
 }

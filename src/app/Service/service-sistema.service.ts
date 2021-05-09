@@ -16,18 +16,18 @@ export class ServiceSistemaService
   mensajeContacto$ = new EventEmitter<string>();
 
 
-  getMensaje()
-  {
-    const headerDict = {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'Access-Control-Allow-Credentials': 'true',
-    }
+  // getMensaje()
+  // {
+  //   const headerDict = {
+  //     'Content-Type': 'application/json',
+  //     'Accept': 'application/json',
+  //     'Access-Control-Allow-Credentials': 'true',
+  //   }
     
-    const requestOptions = {                                                                                                                                                                                 
-      headers: new HttpHeaders(headerDict), 
-    };
+  //   const requestOptions = {                                                                                                                                                                                 
+  //     headers: new HttpHeaders(headerDict), 
+  //   };
 
-    return this.http.get(`${environment.URL}/contacto/mensaje`, requestOptions );
-  }
+  //   return this.http.get(`${environment.URL}/contacto/mensaje`, requestOptions );
+  // }
 }

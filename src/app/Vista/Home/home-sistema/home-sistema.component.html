@@ -1,1 +1,26 @@
-<p class='Noto'>home-sistema works!</p>
+
+
+
+
+
+
+codigo qr
+
+<div style="text-align:center">
+    <h1>
+      @techiediaries/ngx-qrcode demo 
+    </h1>
+  </div>
+   
+  <ngx-qrcode 
+    [elementType]="elementType" 
+    [value]="value"
+    
+    errorCorrectionLevel="L">
+  </ngx-qrcode>
+
+  <div class="row">
+      <div class="col-12">
+          {{ value }}
+      </div>
+  </div>

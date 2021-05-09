@@ -1,4 +1,4 @@
-<section [formGroup]="datosForm">
+<form [formGroup]="datosPersona">
 
   <div class="row">
     <div class="col-12">
@@ -10,9 +10,9 @@
           <input matInput class='col-12' formControlName="nombrePersona" required minlength="2">
         </mat-form-field>
     
-        <div class="alert alert-info" *ngIf="datosForm.get('nombrePersona').invalid &&
-           (datosForm.get('nombrePersona').dirty || 
-           datosForm.get('nombrePersona').touched)">
+        <div class="alert alert-info" *ngIf="datosPersona.get('nombrePersona').invalid &&
+           (datosPersona.get('nombrePersona').dirty || 
+           datosPersona.get('nombrePersona').touched)">
           Ingrese solo letras, minimo 2 caracteres y es requerido
         </div>
       </div>
@@ -28,9 +28,9 @@
           </mat-label>
           <input matInput class='col-12' formControlName="paterno" required minlength="2">
         </mat-form-field>    
-        <div class="alert alert-info" *ngIf="datosForm.get('paterno').invalid &&
-           (datosForm.get('paterno').dirty || 
-           datosForm.get('paterno').touched)">
+        <div class="alert alert-info" *ngIf="datosPersona.get('paterno').invalid &&
+           (datosPersona.get('paterno').dirty || 
+           datosPersona.get('paterno').touched)">
           Ingrese solo letras, minimo 2 caracteres y es requerido
         </div> 
       </div>
@@ -41,9 +41,9 @@
           </mat-label>
           <input matInput class='col-12' formControlName="materno" required minlength="2">
         </mat-form-field>
-        <div class="alert alert-info" *ngIf="datosForm.get('materno').invalid &&
-           (datosForm.get('materno').dirty || 
-           datosForm.get('materno').touched)">
+        <div class="alert alert-info" *ngIf="datosPersona.get('materno').invalid &&
+           (datosPersona.get('materno').dirty || 
+           datosPersona.get('materno').touched)">
           Ingrese solo letras, minimo 2 caracteres y es requerido
         </div>
       </div>
@@ -59,9 +59,9 @@
       </mat-label>
       <input matInput class='col-12' formControlName="correo" required >
     </mat-form-field>
-    <div class="alert alert-info" *ngIf="datosForm.get('correo').invalid &&
-       (datosForm.get('correo').dirty || 
-       datosForm.get('correo').touched)">
+    <div class="alert alert-info" *ngIf="datosPersona.get('correo').invalid &&
+       (datosPersona.get('correo').dirty || 
+       datosPersona.get('correo').touched)">
       correo no valido
     </div>
   </div>
@@ -72,13 +72,13 @@
         </mat-label>
         <input matInput class='col-12' formControlName="telefono" required minlength="10" maxlength='10'>
       </mat-form-field>
-      <div class="alert alert-info" *ngIf="datosForm.get('telefono').invalid &&
-         (datosForm.get('telefono').dirty || 
-         datosForm.get('telefono').touched)">
+      <div class="alert alert-info" *ngIf="datosPersona.get('telefono').invalid &&
+         (datosPersona.get('telefono').dirty || 
+         datosPersona.get('telefono').touched)">
         Ingrese solo números , mínimo 10 caracteres y es requerido
       </div>
     </div>
 </div>
 
 
-</section>
+</form>

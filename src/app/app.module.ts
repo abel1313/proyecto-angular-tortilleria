@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavegacionSistemaComponent } from './Vista/Navegacion/navegacion-sistema/navegacion-sistema.component';
 import { HomeSistemaComponent } from './Vista/Home/home-sistema/home-sistema.component';
 import { ServiceSistemaService } from './Service/service-sistema.service';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 
 
 
@@ -29,11 +30,6 @@ import { ServiceSistemaService } from './Service/service-sistema.service';
     PaginaNoEncontradaComponent,
     NavegacionSistemaComponent,
     HomeSistemaComponent,
- 
-    
-    
-    
-    
     
   ],
   imports: [
@@ -41,6 +37,7 @@ import { ServiceSistemaService } from './Service/service-sistema.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgxQRCodeModule,
     
   ],
   providers: [ServiceSistemaService],
